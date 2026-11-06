@@ -261,3 +261,29 @@ Database access through the backend API.
 Environment-based configuration for sensitive settings.
 
 Actual security controls should be verified against the implemented application before submission.
+
+## 10. Project Structure
+
+The solution contains the following main application projects:
+
+Project
+
+Responsibility
+
+RaceDay.API
+
+Backend REST API
+
+RaceDay.Web
+
+ASP.NET Core MVC frontend
+
+RaceDay.Contracts
+
+Shared application contracts
+
+RaceDay.Tests
+
+Automated tests
+
+The solution also contains Docker configuration, environment configuration and GitHub Actions workflow files.
