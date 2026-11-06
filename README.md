@@ -302,3 +302,11 @@ Docker containers: docker ps
 Docker Compose validation: docker compose config --quiet
 
 Additional functional testing should cover authentication, role-based navigation, event management, participant enrolment, image uploads and database operations.
+
+## 12. Conclusion
+
+RaceDay demonstrates the development of a web-based sporting event management platform using modern software development technologies.
+
+By combining ASP.NET Core MVC, REST API services, SQL Server, Azure Blob Storage and Docker, the project brings together application development, database management, cloud storage and containerisation in one integrated solution.
+
+## RaceDay – Race. Move. Achieve.
