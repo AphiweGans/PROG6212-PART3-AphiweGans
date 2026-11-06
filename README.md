@@ -179,24 +179,24 @@ Tracks Entity Framework database migrations
 
 ## 6. Running the Project with Docker
 
-# Step 1. Open Docker Desktop
+## Step 1. Open Docker Desktop
 1. Open Docker Desktop on Windows.
 2. Wait until Docker Engine is running.
 3. Do not proceed until Docker Desktop has finished starting.
 
-# Step 2. Open Windows PowerShell
+## Step 2. Open Windows PowerShell
 Copy and paste:
 cd "C:\Users\Student\Downloads\RaceDay_Part3_Added_To_Part2\RaceDay_Part2_Final"
 
 
-# Step 3. Check your Docker configuration
+## Step 3. Check your Docker configuration
 Run:
 docker compose config --quiet
 
 
 If it returns to the prompt without an error, the configuration is valid.
 
-# Step 4. Start RaceDay
+## Step 4. Start RaceDay
 Run:
 docker compose up --build -d
 
@@ -207,7 +207,7 @@ Expected services
 - raceday-api — Backend API
 - raceday-web — Website
   
-# Step 5. Check whether everything is running
+## Step 5. Check whether everything is running
 Run:
 docker ps
 
@@ -220,7 +220,7 @@ raceday-db	14333
 
 SQL Server should ideally show healthy.
 
-# Step 6. Open your website
+## Step 6. Open your website
 RaceDay website
 http://localhost:8080
   Open RaceDay 
@@ -237,6 +237,7 @@ View logs	docker compose logs --tail=100
 View API logs	docker compose logs --tail=100 raceday-api
 Stop project	docker compose stop
 Start existing containers	docker compose start
+
 ## 7. API Documentation
 
 RaceDay provides Swagger documentation for exploring and testing available API endpoints.
