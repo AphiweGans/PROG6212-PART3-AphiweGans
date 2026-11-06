@@ -1,3 +1,4 @@
+
 ## PROG6212-PART3-AphiweGans
 
 ## Race. Move. Achieve.
@@ -287,3 +288,17 @@ RaceDay.Tests
 Automated tests
 
 The solution also contains Docker configuration, environment configuration and GitHub Actions workflow files.
+
+## 11. Testing and Verification
+
+The application can be checked using the following services:
+
+Website: http://localhost:8080
+
+Swagger: http://localhost:8081/swagger
+
+Docker containers: docker ps
+
+Docker Compose validation: docker compose config --quiet
+
+Additional functional testing should cover authentication, role-based navigation, event management, participant enrolment, image uploads and database operations.
