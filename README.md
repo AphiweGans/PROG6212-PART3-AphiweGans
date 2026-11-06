@@ -223,3 +223,13 @@ To start the existing containers again:
 docker compose start
 
 Database warning: Avoid using docker compose down -v because it removes associated Docker volumes and can result in database data loss.
+
+## 7. API Documentation
+
+RaceDay provides Swagger documentation for exploring and testing available API endpoints.
+
+After starting the application, open:
+
+http://localhost:8081/swagger
+
+Swagger provides an interface for viewing the API operations and testing supported requests.
