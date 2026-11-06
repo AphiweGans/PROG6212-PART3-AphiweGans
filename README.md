@@ -179,76 +179,64 @@ Tracks Entity Framework database migrations
 
 ## 6. Running the Project with Docker
 
-Prerequisites
+# Step 1. Open Docker Desktop
+1. Open Docker Desktop on Windows.
+2. Wait until Docker Engine is running.
+3. Do not proceed until Docker Desktop has finished starting.
 
-Before running RaceDay, ensure that you have installed:
+# Step 2. Open Windows PowerShell
+Copy and paste:
+cd "C:\Users\Student\Downloads\RaceDay_Part3_Added_To_Part2\RaceDay_Part2_Final"
 
-Docker Desktop.
 
-Docker Compose (included with current Docker Desktop installations).
-
-Git, if cloning the repository.
-
-A compatible Windows, macOS or Linux environment.
-
-Step 1: Clone the repository
-
-git clone YOUR_GITHUB_REPOSITORY_URL
-
-Navigate into the project directory containing the Docker Compose file.
-
-Step 2: Configure environment variables
-
-Create or configure the .env file required by the Docker Compose configuration.
-
-Add the required SQL Server password:
-
-MSSQL_SA_PASSWORD=YOUR_SECURE_PASSWORD
-
-Configure the Azure Blob Storage connection string using your own Azure Storage account credentials.
-
-Do not commit the .env file or expose your credentials.
-
-Step 3: Start the application
-
+# Step 3. Check your Docker configuration
 Run:
+docker compose config --quiet
 
-docker compose up --build
 
-Docker Compose builds and starts the configured application services.
+If it returns to the prompt without an error, the configuration is valid.
 
-Step 4: Access the application
+# Step 4. Start RaceDay
+Run:
+docker compose up --build -d
 
-Once the containers are running, access the services using the following addresses:
 
-Service
+This builds the application images if necessary and starts the configured services in the background.
+Expected services
+- raceday-db — SQL Server
+- raceday-api — Backend API
+- raceday-web — Website
+  
+# Step 5. Check whether everything is running
+Run:
+docker ps
 
-Address
 
-RaceDay Website
+You should see these three containers:
+Container	Port
+raceday-web	8080
+raceday-api	8081
+raceday-db	14333
 
+SQL Server should ideally show healthy.
+
+# Step 6. Open your website
+RaceDay website
 http://localhost:8080
-
-API Swagger Documentation
+  Open RaceDay 
+API Swagger documentation
 
 http://localhost:8081/swagger
-
-SQL Server
-
-localhost, port 14333
-
-Step 5: Stop the application
-
-To stop the running containers, use:
-
-docker compose stop
-
-To start the existing containers again:
-
-docker compose start
-
-Database warning: Avoid using docker compose down -v because it removes associated Docker volumes and can result in database data loss.
-
+Open Swagger
+Important commands to keep
+Task	PowerShell command
+Start project	docker compose up -d
+Build and start	docker compose up --build -d
+Check containers	docker ps
+View logs	docker compose logs --tail=100
+View API logs	docker compose logs --tail=100 raceday-api
+Stop project	docker compose stop
+Start existing containers	docker compose start
 ## 7. API Documentation
 
 RaceDay provides Swagger documentation for exploring and testing available API endpoints.
