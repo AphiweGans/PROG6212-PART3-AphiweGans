@@ -113,3 +113,41 @@ Azure Blob Storage provides cloud storage for application images.
 Uploaded images are stored in the configured Azure Blob Storage container, while the application can use their references when displaying images.
 
 Security note: Azure connection strings and access keys must be stored securely in environment variables or configuration settings. They must never be committed to GitHub.
+
+## 5. Database Structure
+
+The application uses Microsoft SQL Server.
+
+The database includes the following tables:
+
+Table
+
+Purpose
+
+Organisers
+
+Stores organiser information
+
+Participants
+
+Stores participant information
+
+Events
+
+Stores sporting event information
+
+Categories
+
+Stores event categories
+
+Enrolments
+
+Stores participant enrolments
+
+Results
+
+Stores event result information
+
+__EFMigrationsHistory
+
+Tracks Entity Framework database migrations
