@@ -151,3 +151,75 @@ Stores event result information
 __EFMigrationsHistory
 
 Tracks Entity Framework database migrations
+
+## 6. Running the Project with Docker
+
+Prerequisites
+
+Before running RaceDay, ensure that you have installed:
+
+Docker Desktop.
+
+Docker Compose (included with current Docker Desktop installations).
+
+Git, if cloning the repository.
+
+A compatible Windows, macOS or Linux environment.
+
+Step 1: Clone the repository
+
+git clone YOUR_GITHUB_REPOSITORY_URL
+
+Navigate into the project directory containing the Docker Compose file.
+
+Step 2: Configure environment variables
+
+Create or configure the .env file required by the Docker Compose configuration.
+
+Add the required SQL Server password:
+
+MSSQL_SA_PASSWORD=YOUR_SECURE_PASSWORD
+
+Configure the Azure Blob Storage connection string using your own Azure Storage account credentials.
+
+Do not commit the .env file or expose your credentials.
+
+Step 3: Start the application
+
+Run:
+
+docker compose up --build
+
+Docker Compose builds and starts the configured application services.
+
+Step 4: Access the application
+
+Once the containers are running, access the services using the following addresses:
+
+Service
+
+Address
+
+RaceDay Website
+
+http://localhost:8080
+
+API Swagger Documentation
+
+http://localhost:8081/swagger
+
+SQL Server
+
+localhost, port 14333
+
+Step 5: Stop the application
+
+To stop the running containers, use:
+
+docker compose stop
+
+To start the existing containers again:
+
+docker compose start
+
+Database warning: Avoid using docker compose down -v because it removes associated Docker volumes and can result in database data loss.
