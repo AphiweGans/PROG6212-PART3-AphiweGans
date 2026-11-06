@@ -244,7 +244,7 @@ RaceDay provides Swagger documentation for exploring and testing available API e
 
 After starting the application, open:
 
-http://localhost:8081/swagger
+http://localhost:8080?utm_source=chatgpt.com
 
 Swagger provides an interface for viewing the API operations and testing supported requests.
 
