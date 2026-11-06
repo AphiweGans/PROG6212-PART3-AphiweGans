@@ -233,3 +233,13 @@ After starting the application, open:
 http://localhost:8081/swagger
 
 Swagger provides an interface for viewing the API operations and testing supported requests.
+
+## 8. Continuous Integration and Deployment
+
+The project contains a GitHub Actions workflow:
+
+.github/workflows/dotnet-ci.yml
+
+The workflow is intended to support automated project validation through GitHub Actions.
+
+The successful execution of the workflow should be checked in the repository's Actions tab. The presence of the workflow file alone does not confirm that the CI/CD pipeline has passed.
