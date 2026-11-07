@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RaceDay.Contracts</name>
+    </assembly>
+    <members>
+        <member name="P:RaceDay.Contracts.RegisterDto.Role">
+            <summary>0 = Organiser, 1 = Participant.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.EventCreateDto.EventType">
+            <summary>0 = Run, 1 = Walk, 2 = Cycle.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.EnrolmentCreateDto.CategoryId">
+            <summary>The category (within an event) the participant wants to enter.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.EnrolmentStatusUpdateDto.Status">
+            <summary>Pending, Confirmed or Cancelled.</summary>
+        </member>
+        <member name="T:RaceDay.Contracts.ResultCaptureDto">
+            <summary>Body for POST /api/enrolments/{enrolmentId}/results (Part 1 plan): finish time, position and status.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.ResultCaptureDto.FinishTime">
+            <summary>Finish time as hh:mm:ss, e.g. 00:45:30.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.ResultCaptureDto.Position">
+            <summary>Finishing position (1 = first).</summary>
+        </member>
+        <member name="T:RaceDay.Contracts.ResultCreateDto">
+            <summary>Body for POST /api/results: the same as <see cref="T:RaceDay.Contracts.ResultCaptureDto"/> plus the enrolment id.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.ResultCreateDto.EnrolmentId">
+            <summary>The enrolment the result belongs to.</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.AuthResponse.Role">
+            <summary>"Organiser" or "Participant".</summary>
+        </member>
+        <member name="P:RaceDay.Contracts.EnrolmentDto.Status">
+            <summary>Pending, Confirmed or Cancelled.</summary>
+        </member>
+        <member name="T:RaceDay.Contracts.UploadResponse">
+            <summary>Returned by the optional Part 3 image upload endpoints.</summary>
+        </member>
+    </members>
+</doc>
